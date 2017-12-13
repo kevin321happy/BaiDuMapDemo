@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:id="@+id/bar_main_layout"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="50dp"
+                                       android:background="#ffffff"
+                                       android:gravity="center_vertical">
+
+    <ImageButton
+        android:id="@+id/img_btn_navigation_left"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_navigation_left"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:visibility="gone"/>
+    <!--  <item name="android:layout_width">wrap_content</item>
+      <item name="android:layout_height">match_parent</item>
+      <item name="android:layout_centerInParent">true</item>-->
+    <ImageButton
+        android:id="@+id/img_btn_navigation_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@null"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_navigation_title"
+        style="@style/navigation_title_style"/>
+
+    <ImageButton
+        android:id="@+id/img_btn_navigation_right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:background="@null"
+        android:padding="5dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_navigation_right"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

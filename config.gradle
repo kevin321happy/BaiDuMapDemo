@@ -1,0 +1,52 @@
+ext {
+    android = [
+            applicationId    : "com.fips.huashun",
+            compileSdkVersion: 25,
+            buildToolsVersion: "26.0.2",
+            minSdkVersion    : 16,
+            targetSdkVersion : 22,
+            applicationId    : "com.wh.jxd.com.mapdemo",
+            versionCode      : 40,
+            versionName      : "2.2.0",
+
+//            compile 'com.android.support:appcompat-v7:22.2.0'
+//            compile 'com.android.support:design:22.2.0'
+//            compile 'com.android.support:recyclerview-v7:22.2.0'
+//            compile 'com.android.support:cardview-v7:22.2.0'
+    ]
+    dependVersion = [
+            support: "25.4.0"
+    ]
+
+    dependencies = [
+            // ------------- Android -------------
+            supportV4       : "com.android.support:support-v4:${dependVersion.support}",
+            appcompatV7     : "com.android.support:appcompat-v7:${dependVersion.support}",
+            design          : "com.android.support:design:${dependVersion.support}",
+            junit           : "junit:junit:4.12",
+            cardView        : "com.android.support:cardview-v7:${dependVersion.support}",
+            constraintLayout: 'com.android.support.constraint:constraint-layout:1.0.2',
+            //------------- 测试 -------------
+            espresso        : "com.android.support.test.espresso:espresso-core:2.2.2",
+            runner          : 'com.android.support.test:runner:1.0.1',
+
+            // ------------- 网络请求 -------------
+            nohttp          : 'com.yanzhenjie.nohttp:nohttp:1.1.3',
+
+            // ------------- 图片加载 -------------
+            fresco          : 'com.facebook.fresco:fresco:0.14.1',
+            animatedGif     : 'com.facebook.fresco:animated-gif:0.12.0',
+            FrescoUtils     : 'com.github.CarGuo:FrescoUtils:v1.0.7',
+            animatedBase    : 'com.facebook.fresco:animated-base-support:1.2.0',
+
+            // ------------- RxAndroid -------------
+            rxAndroid       : 'io.reactivex:rxandroid:1.0.1',
+            rxJava          : 'io.reactivex:rxjava:1.0.14',
+
+            // ------------- json解析 -------------
+            jsonSimple      : 'com.googlecode.json-simple:json-simple:1.1.1',
+            fastJson        : 'com.alibaba:fastjson:1.1.54.android',
+            gson            : 'com.google.code.gson:gson:2.8.0',
+            // ------------- 地图 -------------
+    ]
+}
