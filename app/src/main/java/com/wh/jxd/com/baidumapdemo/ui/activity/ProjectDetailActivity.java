@@ -1,4 +1,4 @@
-package com.wh.jxd.com.baidumapdemo;
+package com.wh.jxd.com.baidumapdemo.ui.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,13 +7,15 @@ import android.support.annotation.Nullable;
 import android.view.Menu;
 import android.view.View;
 
+import com.wh.jxd.com.baidumapdemo.R;
+import com.wh.jxd.com.baidumapdemo.base.BaseActivity;
 import com.wh.jxd.com.baidumapdemo.widget.NavigationBar;
 
 /**
  * Created by kevin321vip on 2017/12/12.
  */
 
-public class ProjectDetailActivity extends Activity {
+public class ProjectDetailActivity extends BaseActivity {
 
     private NavigationBar mNb_title;
     @Override

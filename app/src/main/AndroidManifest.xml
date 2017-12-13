@@ -31,13 +31,13 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="5EcpA5ba6KLuWCGB8oVnEMAjwwa9hGeX" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".ProjectDetailActivity"/>
+        <activity android:name=".ui.activity.ProjectDetailActivity"/>
     </application>
 </manifest>

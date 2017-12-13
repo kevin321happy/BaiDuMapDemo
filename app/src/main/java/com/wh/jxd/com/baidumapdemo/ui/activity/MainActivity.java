@@ -1,4 +1,4 @@
-package com.wh.jxd.com.baidumapdemo;
+package com.wh.jxd.com.baidumapdemo.ui.activity;
 
 import android.content.Intent;
 import android.location.Location;
@@ -15,7 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
@@ -39,14 +38,15 @@ import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.map.TextOptions;
 import com.baidu.mapapi.map.UiSettings;
 import com.baidu.mapapi.model.LatLng;
-import com.baidu.mapapi.model.LatLngBounds;
+import com.wh.jxd.com.baidumapdemo.R;
+import com.wh.jxd.com.baidumapdemo.base.BaseActivity;
 import com.wh.jxd.com.baidumapdemo.bean.MarkBean;
 import com.wh.jxd.com.baidumapdemo.widget.CustomPopWindow;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BaiduMap.OnMarkerClickListener, BaiduMap.OnMapClickListener {
+public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, BaiduMap.OnMarkerClickListener, BaiduMap.OnMapClickListener {
 
     private MapView mMapView;
     private NavigationView mNavigationView;
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private List<MarkBean> mMarkerOptions = new ArrayList<>();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
@@ -81,8 +81,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mNavigationView.setNavigationItemSelectedListener(this);
         setLatLngBounds();
 //        showLocation();
-
-
     }
 
     /**
