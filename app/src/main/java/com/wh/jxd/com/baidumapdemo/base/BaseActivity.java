@@ -5,6 +5,7 @@ import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+
 import com.wh.jxd.com.baidumapdemo.R;
 import com.wh.jxd.com.baidumapdemo.utils.StatusBarUtil;
 

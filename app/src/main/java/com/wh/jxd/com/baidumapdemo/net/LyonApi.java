@@ -31,7 +31,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LyonApi {
     Retrofit mRetrofit;
-    private final LyonApiService Service;
+    public final LyonApiService Service;
 
     public LyonApi() {
         //日志拦截器
@@ -79,8 +79,8 @@ public class LyonApi {
         private static final LyonApi INSTANCE = new LyonApi();
     }
 
-    private static LyonApi getApiService() {
-        return RetrofitHodler.INSTANCE;
+    public static LyonApiService getApiService() {
+        return RetrofitHodler.INSTANCE.Service;
     }
 
 

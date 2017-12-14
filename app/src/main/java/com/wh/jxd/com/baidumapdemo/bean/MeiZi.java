@@ -16,6 +16,33 @@ public class MeiZi {
     private boolean used;
     private String who;
 
+    public MeiZi(String _id, String createdAt, String desc, String publishedAt, String source, String type, String url, boolean used, String who) {
+        this._id = _id;
+        this.createdAt = createdAt;
+        this.desc = desc;
+        this.publishedAt = publishedAt;
+        this.source = source;
+        this.type = type;
+        this.url = url;
+        this.used = used;
+        this.who = who;
+    }
+
+    @Override
+    public String toString() {
+        return "MeiZi{" +
+                "_id='" + _id + '\'' +
+                ", createdAt='" + createdAt + '\'' +
+                ", desc='" + desc + '\'' +
+                ", publishedAt='" + publishedAt + '\'' +
+                ", source='" + source + '\'' +
+                ", type='" + type + '\'' +
+                ", url='" + url + '\'' +
+                ", used=" + used +
+                ", who='" + who + '\'' +
+                '}';
+    }
+
     public String get_id() {
         return _id;
     }

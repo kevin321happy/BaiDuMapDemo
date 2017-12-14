@@ -67,6 +67,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         setContentView(R.layout.activity_main);
         initView();
     }
+
     private void initView() {
         mMapView = (MapView) findViewById(R.id.bmapView);
         mBaiduMap = mMapView.getMap();
@@ -196,6 +197,13 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 mEnableAllUiSetting = mEnableAllUiSetting == true ? false : true;
                 EnableAllGestureAndWidget(mEnableAllUiSetting);
                 break;
+            case R.id.nav_five:
+                Intent intent = new Intent(this, TestActivity.class);
+                startActivity(intent);
+
+                break;
+            case R.id.nav_six:
+                break;
         }
         item.setChecked(true);
         mDrawerLayout.closeDrawers();
@@ -249,9 +257,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         mMarkerOptions.add(new MarkBean("江滨社区", "湖南省湘潭市岳塘区滴水埠街道江滨社区", 27.879288, 112.978129));
         mMarkerOptions.add(new MarkBean("金桥城", "湖南省湘潭市岳塘区红旗街道红旗社区西方向", 27.910717, 112.942635));
         mMarkerOptions.add(new MarkBean("湘潭中心", "湖南省湘潭市岳塘区建设路街道建设路社区西南方向", 27.840848, 112.9243973292));
-
         //显示InfoWindow
-
         for (MarkBean markerOption : mMarkerOptions) {
             LatLng LatLng = new LatLng(markerOption.getLongitude(), markerOption.getLatitude());
             //创建InfoWindow展示的view
@@ -311,6 +317,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                     .setFocusable(true)
                     .creat();
         }
+
         View contentView = mLayoutPopWindow.getContentView();
         mListView = (ListView) contentView.findViewById(R.id.lv);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1);
@@ -436,6 +443,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     /**
      * 当点击地图时InfoWindow消失
+     *
      * @param latLng
      */
     @Override

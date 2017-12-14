@@ -11,7 +11,7 @@ import com.wh.jxd.com.baidumapdemo.utils.Utils;
  */
 
 public class AppcationEx extends Application {
-    private AppcationEx mAppcationEx;
+    private static AppcationEx mAppcationEx;
     @Override
     public void onCreate() {
         mAppcationEx=this;
