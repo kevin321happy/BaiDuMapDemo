@@ -12,7 +12,8 @@ import android.widget.PopupWindow;
 
 /**
  * Created by kevin321vip on 2017/12/11.
- * 自定义的PopWindow，构建者模式链式调用
+ * 自定义的PopWindow
+ * 构建者模式链式调用
  */
 
 public class CustomPopWindow {
@@ -98,7 +99,6 @@ public class CustomPopWindow {
 
     /**
      * 相对于父控件的位置（通过设置Gravity.CENTER，下方Gravity.BOTTOM等 ），可以设置具体位置坐标
-     *
      * @param parent
      * @param gravity
      * @param x       the popup's x location offset

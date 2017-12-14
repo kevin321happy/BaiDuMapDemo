@@ -67,7 +67,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         setContentView(R.layout.activity_main);
         initView();
     }
-
     private void initView() {
         mMapView = (MapView) findViewById(R.id.bmapView);
         mBaiduMap = mMapView.getMap();
@@ -241,9 +240,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private void addMarks() {
         //创建OverlayOptions的集合
         List<OverlayOptions> options = new ArrayList<OverlayOptions>();
-
-//        mMarkerOptions.add(new LatLng(28.227780, 112.938860));
-
         mMarkerOptions.add(new MarkBean("湘银纳帕溪谷", "湖南省湘潭市岳塘区宝塔街道云峰村西北方向", 27.840796, 112.942943));
         mMarkerOptions.add(new MarkBean("东风园小区", "湖南省湘潭市岳塘区下摄司街道半边街社区", 27.809111, 112.937440));
         mMarkerOptions.add(new MarkBean("江南城", "湖南省湘潭市岳塘区板塘街道农联村西南方向约1.08公里", 27.846723, 112.991522));
