@@ -10,20 +10,25 @@ import retrofit2.CallAdapter;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 /**
  * Created by kevin321vip on 2017/12/14.
  */
 
 public class RestCreator {
+
     /**
      * 构建全局的Retrofit客户端
+     * .baseUrl(UrlConstance.BaseUrl)
+     * .addConverterFactory(GsonConverterFactory.create())
+     * http://gank.io/api/data/Android/10/1
      */
     private static final class RetrofitHodler {
         private static final Retrofit RETROFIT_CLIENT = new Retrofit.Builder()
-                .baseUrl(UrlConstance.BaseUrl)
                 .client(OkHttpHodler.OK_HTTP_CLIENT)
-                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl("http://gank.io/api/")
+                .addConverterFactory(ScalarsConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
@@ -49,7 +54,6 @@ public class RestCreator {
     private static final class ParamsHodler {
         private static final WeakHashMap<String, Object> PARAMS = new WeakHashMap<>();
     }
-
     /**
      * 获取参数
      *

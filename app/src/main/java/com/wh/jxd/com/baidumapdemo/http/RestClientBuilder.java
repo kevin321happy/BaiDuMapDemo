@@ -59,6 +59,11 @@ public class RestClientBuilder {
         return this;
     }
 
+    public final RestClientBuilder success(ISuccess iSuccess) {
+        this.SUCCESS = iSuccess;
+        return this;
+    }
+
     public final RestClientBuilder error(IError iError) {
         this.ERROR = iError;
         return this;

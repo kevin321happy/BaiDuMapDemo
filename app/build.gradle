@@ -40,12 +40,10 @@ dependencies {
     compile rootProject.ext.dependencies.rxandroid2
     compile rootProject.ext.dependencies.retrofit2
     compile rootProject.ext.dependencies.converterGson
+    compile rootProject.ext.dependencies.converterScalars
     compile rootProject.ext.dependencies.adapterRxjava2
     //加载动画
     compile rootProject.ext.dependencies.aviloader
-//    compile rootProject.ext.dependencies.rxlifecycle
-//    compile rootProject.ext.dependencies.rxlifecycleComponents
-
     //okhttp3拦截器
     compile rootProject.ext.dependencies.loggerinterceptor
     testImplementation rootProject.ext.dependencies.junit

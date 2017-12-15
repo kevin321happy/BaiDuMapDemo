@@ -2,12 +2,18 @@ package com.wh.jxd.com.baidumapdemo.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
 import android.widget.TextView;
 
 import com.wh.jxd.com.baidumapdemo.R;
 import com.wh.jxd.com.baidumapdemo.base.BaseActivity;
 import com.wh.jxd.com.baidumapdemo.bean.MeiZi;
 import com.wh.jxd.com.baidumapdemo.bean.base.BaseResponse;
+import com.wh.jxd.com.baidumapdemo.http.HttpMethod;
+import com.wh.jxd.com.baidumapdemo.http.RestClient;
+import com.wh.jxd.com.baidumapdemo.http.callback.IError;
+import com.wh.jxd.com.baidumapdemo.http.callback.IRequest;
+import com.wh.jxd.com.baidumapdemo.http.callback.ISuccess;
 import com.wh.jxd.com.baidumapdemo.net.CustomObserver;
 import com.wh.jxd.com.baidumapdemo.net.LyonApi;
 import com.wh.jxd.com.baidumapdemo.utils.LogUtils;
@@ -15,6 +21,7 @@ import com.wh.jxd.com.baidumapdemo.utils.ToastUtils;
 import com.wh.jxd.com.baidumapdemo.widget.NavigationBar;
 
 import java.util.List;
+import java.util.WeakHashMap;
 
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -34,7 +41,7 @@ public class TestActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         initView();
-        initData();
+//        initData();
     }
 
     private void initView() {
@@ -53,18 +60,6 @@ public class TestActivity extends BaseActivity {
     }
 
     private void initData() {
-//        IdeaApi.getApiService()
-//                .getMezi()
-//                .compose(this.<BasicResponse<List<MeiZi>>>bindToLifecycle())
-//                .subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(new DefaultObserver<BasicResponse<List<MeiZi>>>(this) {
-//                    @Override
-//                    public void onSuccess(BasicResponse<List<MeiZi>> response) {
-//                        List<MeiZi> results = response.getResults();
-//                        showToast("请求成功，妹子个数为"+results.size());
-//                    }
-//                });
         LyonApi.getApiService()
                 .getMezi()
                 .subscribeOn(io.reactivex.schedulers.Schedulers.io())
@@ -103,5 +98,31 @@ public class TestActivity extends BaseActivity {
                     }
                 });
 
+    }
+
+    /**
+     * 请求网络
+     *
+     * @param view
+     */
+    public void request(View view) {
+        RestClient restClient = RestClient.builder()
+                .url("data/Android/10/1")
+                .load(this)
+//                .params(new WeakHashMap<String, Object>())
+                .success(new ISuccess() {
+                    @Override
+                    public void onSuccess(String response) {
+
+                    }
+                })
+                .error(new IError() {
+                    @Override
+                    public void onError(int code, String msg) {
+
+                    }
+                })
+                .build();
+        restClient.request(HttpMethod.GET);
     }
 }
