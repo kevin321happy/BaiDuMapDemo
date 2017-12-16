@@ -6,9 +6,7 @@
 在http包下有关于Retrofit2+rxjava2联网框架的封装,高效、简单
 
 详细介绍请移步博客：
-
-[text](#http://blog.csdn.net/kevin_321v/article/details/78810053)] 
- 
+[博客介绍](http://blog.csdn.net/kevin_321v/article/details/78810053)  
 
 
 
