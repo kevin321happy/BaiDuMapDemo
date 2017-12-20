@@ -41,5 +41,7 @@
 
         <activity android:name=".ui.activity.ProjectDetailActivity" />
         <activity android:name=".ui.activity.TestActivity" />
+        <activity android:name=".ui.activity.MdHeadActivity"/>
+        <activity android:name=".ui.activity.StickyLayoutActivity"/>
     </application>
 </manifest>

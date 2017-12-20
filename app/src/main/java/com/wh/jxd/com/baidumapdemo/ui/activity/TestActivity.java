@@ -99,7 +99,6 @@ public class TestActivity extends BaseActivity {
                 });
 
     }
-
     /**
      * 请求网络
      *
@@ -124,5 +123,6 @@ public class TestActivity extends BaseActivity {
                 })
                 .build();
         restClient.request(HttpMethod.GET);
+
     }
 }

@@ -183,6 +183,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
      */
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Intent intent;
         switch (item.getItemId()) {
             case R.id.nav_one:
                 showSwitchLayoutPop();
@@ -198,11 +199,17 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 EnableAllGestureAndWidget(mEnableAllUiSetting);
                 break;
             case R.id.nav_five:
-                Intent intent = new Intent(this, TestActivity.class);
+                 intent = new Intent(this, TestActivity.class);
                 startActivity(intent);
-
                 break;
             case R.id.nav_six:
+                //MD风格的界面
+                 intent=new Intent(this,MdHeadActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.nav_seven:
+                intent=new Intent(this,StickyLayoutActivity.class);
+                startActivity(intent);
                 break;
         }
         item.setChecked(true);
@@ -216,8 +223,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private void drawOnMap() {
         addMarks();
         addText();
-
-
     }
 
     /**

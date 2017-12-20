@@ -41,6 +41,7 @@ public class RestCreator {
                 .connectTimeout(UrlConstance.TimeOut, TimeUnit.SECONDS)
                 .build();
     }
+
     /**
      * RestService
      */
@@ -54,6 +55,7 @@ public class RestCreator {
     private static final class ParamsHodler {
         private static final WeakHashMap<String, Object> PARAMS = new WeakHashMap<>();
     }
+
     /**
      * 获取参数
      *
@@ -69,4 +71,7 @@ public class RestCreator {
     public static RestService getService() {
         return RestServiceHodler.REST_SERVICE;
     }
+
+
+
 }
